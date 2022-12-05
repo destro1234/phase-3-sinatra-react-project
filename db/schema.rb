@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2022_12_04_232048) do
   create_table "dogs", force: :cascade do |t|
     t.string "name"
     t.integer "age"
-    t.string "owenr"
+    t.string "owner"
     t.string "temperament"
   end
 
@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(version: 2022_12_04_232048) do
 
   create_table "dogwalks", force: :cascade do |t|
     t.integer "length"
-    t.integer "dog_id"
     t.integer "dogwalker_id"
+    t.time "start_time"
+    t.time "end_time"
   end
 
 end
