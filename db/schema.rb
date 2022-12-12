@@ -17,18 +17,17 @@ ActiveRecord::Schema.define(version: 2022_12_04_232048) do
     t.integer "age"
     t.string "owner"
     t.string "temperament"
+    t.integer "walk_id"
   end
 
-  create_table "dogwalkers", force: :cascade do |t|
+  create_table "walkers", force: :cascade do |t|
     t.string "name"
     t.integer "years_of_experience"
-    t.integer "start_time"
-    t.integer "end_time"
   end
 
-  create_table "dogwalks", force: :cascade do |t|
+  create_table "walks", force: :cascade do |t|
     t.integer "length"
-    t.integer "dogwalker_id"
+    t.integer "walker_id"
     t.time "start_time"
     t.time "end_time"
   end

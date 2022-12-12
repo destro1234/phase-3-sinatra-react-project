@@ -10,4 +10,10 @@ class ApplicationController < Sinatra::Base
     Dog.all.to_json
   end
 
+  post '/dogs' do
+    
+    new_dog = Dog.create(params)
+    new_dog.to_json
+  end
+
 end

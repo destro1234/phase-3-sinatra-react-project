@@ -1,3 +1,3 @@
 class Dog < ActiveRecord::Base
-    has_many :dogwalks
+    belongs_to :walk
 end

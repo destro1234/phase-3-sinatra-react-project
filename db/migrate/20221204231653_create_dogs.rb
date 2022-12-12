@@ -5,6 +5,7 @@ class CreateDogs < ActiveRecord::Migration[6.1]
       t.integer :age
       t.string :owner
       t.string :temperament
+      t.integer :walk_id
     end
   end
 end
