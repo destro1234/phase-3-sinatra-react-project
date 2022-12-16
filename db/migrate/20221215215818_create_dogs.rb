@@ -4,8 +4,7 @@ class CreateDogs < ActiveRecord::Migration[6.1]
       t.string :name
       t.integer :age
       t.string :owner
-      t.string :temperament
-      t.integer :walk_id
+      t.text :walks, array: true
     end
   end
 end

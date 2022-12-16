@@ -10,26 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_04_232048) do
+ActiveRecord::Schema.define(version: 2022_12_15_215844) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
     t.integer "age"
     t.string "owner"
-    t.string "temperament"
-    t.integer "walk_id"
+    t.text "walks"
   end
 
   create_table "walkers", force: :cascade do |t|
     t.string "name"
     t.integer "years_of_experience"
-  end
-
-  create_table "walks", force: :cascade do |t|
-    t.integer "length"
-    t.integer "walker_id"
-    t.time "start_time"
-    t.time "end_time"
   end
 
 end
