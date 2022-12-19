@@ -14,6 +14,7 @@ class ApplicationController < Sinatra::Base
     
     new_dog = Dog.create(params)
     new_dog.to_json
+    
   end
 
 end
