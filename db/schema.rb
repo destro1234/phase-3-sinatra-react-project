@@ -14,15 +14,16 @@ ActiveRecord::Schema.define(version: 2022_12_19_022947) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
-    t.integer "address"
+    t.string "address"
     t.string "owner"
-    t.text "walks"
     t.string "image"
   end
 
-  create_table "walkers", force: :cascade do |t|
-    t.string "name"
-    t.integer "years_of_experience"
+  create_table "walks", force: :cascade do |t|
+    t.string "dogwalker"
+    t.string "starttime"
+    t.string "length"
+    t.integer "dog_id"
   end
 
 end

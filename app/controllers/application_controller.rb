@@ -10,11 +10,21 @@ class ApplicationController < Sinatra::Base
     Dog.all.to_json
   end
 
+  get '/walks' do
+    Walk.all.to_json
+  end
+
   post '/dogs' do
     
     new_dog = Dog.create(params)
     new_dog.to_json
     
+  end
+
+  post '/walks' do
+
+    new_walk = Walk.create(params)
+    new_walk.to_json
   end
 
 end
