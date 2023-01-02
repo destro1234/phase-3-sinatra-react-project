@@ -4,6 +4,8 @@ class CreateDogs < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :address
       t.string :owner
+      t.text :walks, array: true
+
     end
   end
 end

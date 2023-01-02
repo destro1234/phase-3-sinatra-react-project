@@ -10,6 +10,28 @@ class ApplicationController < Sinatra::Base
     Dog.all.to_json
   end
 
+  get '/dogs/:id' do
+    dog = Dog.find(params[:id])
+    dog.to_json
+
+  end
+
+  get '/walks/:id' do
+    walk = Walk.find(params[:id])
+    walk.to_json
+  end
+
+  delete '/walks/:id' do
+    walk = Walk.find(params[:id])
+    walk.delete
+  end
+
+  delete '/dogs/:id' do
+    dog = Dog.find(params[:id])
+    dog.delete
+  end
+
+
   get '/walks' do
     Walk.all.to_json
   end
