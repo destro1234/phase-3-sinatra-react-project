@@ -49,4 +49,10 @@ class ApplicationController < Sinatra::Base
     new_walk.to_json
   end
 
+  post '/walks/:id' do
+    binding.pry
+    updated_walk = Walk.update(params)
+    updated_walk
+  end
+
 end
