@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2022_12_19_022947) do
     t.string "name"
     t.string "address"
     t.string "owner"
-    t.text "walks"
     t.string "image"
   end
 
