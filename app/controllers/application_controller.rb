@@ -16,16 +16,14 @@ class ApplicationController < Sinatra::Base
     dog.to_json
   end
 
-  get '/walks' do
-    Walk.all.to_json
-  end
-
+  # get '/walks' do
+  #   Walk.all.to_json
+  # end
   
-  
-  get '/walks/:id' do
-    walk = Walk.find(params[:id])
-    walk.to_json
-  end
+  # get '/walks/:id' do
+  #   walk = Walk.find(params[:id])
+  #   walk.to_json
+  # end
 
   delete '/walks/:id' do
     walk = Walk.find(params[:id])
@@ -67,20 +65,4 @@ class ApplicationController < Sinatra::Base
       length: params[:length])
     walk.to_json
   end
-
-  # post '/dogs/:id/walks' do
-  #   new_walk = Walk.create(
-  #     dogwalker: params[:dogwalker],
-  #     starttime: params[:starttime],
-  #     length: params[:length],
-  #     dog_id: params[:dog_id]
-  #     )
-  #   new_walk.to_json
-  #   dog = Dog.find(params[:id])
-  #   walks = dog.walks
-  #   walks.to_json
-  # end
-
-  
-
 end
